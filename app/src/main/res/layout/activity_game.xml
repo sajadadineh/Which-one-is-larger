@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:background="@color/dark"
+    tools:ignore="MissingConstraints"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:visibility="invisible"
+        android:id="@+id/game_constrain"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/which_text"
+            android:text="@string/which"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/small"
+            app:fontFamily="@font/anggada"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/one_is_text"/>
+
+        <TextView
+            android:id="@+id/one_is_text"
+            android:text="@string/one_is"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/small"
+            app:fontFamily="@font/anggada"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/which_text"
+            app:layout_constraintRight_toLeftOf="@+id/larger_text"/>
+
+        <TextView
+            android:id="@+id/larger_text"
+            android:text="@string/larger"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/small"
+            app:fontFamily="@font/anggada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/one_is_text"
+            app:layout_constraintRight_toRightOf="parent"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/point_text"
+            android:text="@string/user_point"
+            android:textSize="@dimen/small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/larger_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/num_one"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/level_text"
+            android:text="@string/remaining_time"
+            android:textSize="@dimen/small"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/point_text"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/num_one"/>
+
+
+
+        <Button
+            android:id="@+id/num_one"
+            android:textSize="@dimen/midum"
+            android:padding="@dimen/small"
+            android:background="@drawable/shape_button_game"
+            android:layout_width="138sp"
+            android:layout_height="168sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toLeftOf="@+id/num_two"
+            app:layout_constraintLeft_toLeftOf="parent"/>
+
+        <Button
+            android:id="@+id/num_two"
+            android:textSize="@dimen/midum"
+            android:padding="@dimen/small"
+            android:background="@drawable/shape_button_game"
+            android:layout_width="138sp"
+            android:layout_height="168sp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toRightOf="@+id/num_one"/>
+
+        <Button
+            android:id="@+id/equal_button"
+            android:text="@string/equal"
+            android:padding="@dimen/small"
+            android:background="@drawable/shape_button_game"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@+id/num_one"
+            app:layout_constraintRight_toRightOf="@+id/num_two"
+            app:layout_constraintLeft_toLeftOf="@+id/num_one"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/again_play_game"
+            android:text="@string/again_play"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/equal_button"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/count_down_number"
+        android:text="3"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="@dimen/larg_dobl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

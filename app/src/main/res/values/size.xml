@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="padding_activity">12sp</dimen>
+    <dimen name="larg_dobl">122sp</dimen>
+    <dimen name="larg">88sp</dimen>
+    <dimen name="midum">58sp</dimen>
+    <dimen name="small">28sp</dimen>
+
+</resources>

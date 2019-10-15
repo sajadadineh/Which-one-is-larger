@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/padding_activity"
+    android:background="@color/dark"
+    tools:context=".MainActivity"
+    tools:ignore="MissingConstraints">
+
+
+    <TextView
+        android:id="@+id/which_text"
+        android:text="@string/which"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/small"
+        app:fontFamily="@font/anggada"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/one_is_text"/>
+
+    <TextView
+        android:id="@+id/one_is_text"
+        android:text="@string/one_is"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/small"
+        app:fontFamily="@font/anggada"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/which_text"
+        app:layout_constraintRight_toLeftOf="@+id/larger_text"/>
+
+    <TextView
+        android:id="@+id/larger_text"
+        android:text="@string/larger"
+        android:textColor="@color/colorAccent"
+        android:textSize="@dimen/small"
+        app:fontFamily="@font/anggada"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/one_is_text"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <Button
+        android:id="@+id/start_Button"
+        android:text="@string/start"
+        android:layout_width="200sp"
+        android:layout_height="200sp"
+        android:textSize="@dimen/small"
+        android:background="@drawable/shape_button_start"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <TextView
+        android:id="@+id/history_text"
+        android:text="@string/history"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
+    <FrameLayout
+        android:id="@+id/history_fragment"
+        android:elevation="@dimen/small"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

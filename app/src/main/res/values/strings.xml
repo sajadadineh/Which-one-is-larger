@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">larger</string>
+
+    <string name="larger">larger</string>
+    <string name="which">which</string>
+    <string name="one_is">one is</string>
+    <string name="start">start</string>
+    <string name="history">High Score</string>
+    <string name="equal">equal</string>
+    <string name="point">your point 15 out of 17</string>
+    <string name="level">Round 1 of 20</string>
+    <string name="user_point">Your Point : %d</string>
+    <string name="game_level">Level %d out of %d</string>
+    <string name="game_finished">Game Finished</string>
+    <string name="again_play">click for again play game</string>
+    <string name="remaining_time">Remaining Time : %d seconds</string>
+    <string name="high_score">Best Score :  </string>
+
+</resources>
