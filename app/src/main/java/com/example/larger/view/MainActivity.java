@@ -1,4 +1,4 @@
-package com.example.larger;
+package com.example.larger.view;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -7,6 +7,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+
+import com.example.larger.view.fragment.BestScoreFragment;
+import com.example.larger.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
         HistoryText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                HistoryFragment historyFragment = new HistoryFragment();
+                BestScoreFragment historyFragment = new BestScoreFragment();
                 getSupportFragmentManager().beginTransaction()
                         .add(R.id.history_fragment,historyFragment)
                         .addToBackStack(null)

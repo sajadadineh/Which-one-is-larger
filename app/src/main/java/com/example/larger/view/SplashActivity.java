@@ -1,4 +1,4 @@
-package com.example.larger;
+package com.example.larger.view;
 
 import android.animation.AnimatorSet;
 import android.animation.ObjectAnimator;
@@ -9,6 +9,8 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.larger.R;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -73,7 +75,7 @@ public class SplashActivity extends AppCompatActivity {
 
     }
 
-    private void FindViews(){
+    private void FindViews()        {
 
         LargerText = findViewById(R.id.larger_text);
         WhichText = findViewById(R.id.which_text);

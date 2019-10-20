@@ -1,4 +1,4 @@
-package com.example.larger;
+package com.example.larger.view;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -14,6 +14,9 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
+
+import com.example.larger.MyPreferenceManager;
+import com.example.larger.R;
 
 import java.util.Random;
 
@@ -53,6 +56,14 @@ public class GameActivity extends AppCompatActivity {
 
     }
 
+    private void UpdateHighScore(){
+        int previousHighScore = MyPreferenceManager.getInstance(GameActivity.this).getHighScore();
+        if (previousHighScore < UserPointInt){
+            MyPreferenceManager.getInstance(this).putHighScore(UserPointInt);
+        }
+
+    }
+
     private void StartGameAndFinish(){
         GameConstraint.setVisibility(View.VISIBLE);
 
@@ -70,6 +81,7 @@ public class GameActivity extends AppCompatActivity {
             public void onFinish() {
                 GameInProgress = false;
                 LevelText.setText(getString(R.string.game_finished));
+                UpdateHighScore();
                 AgainPlayGame.setVisibility(View.VISIBLE);
                 AgainPlayGame.setOnClickListener(new View.OnClickListener() {
                     @Override

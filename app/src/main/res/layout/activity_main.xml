@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:padding="@dimen/padding_activity"
     android:background="@color/dark"
-    tools:context=".MainActivity"
+    tools:context=".view.MainActivity"
     tools:ignore="MissingConstraints">
 
 
